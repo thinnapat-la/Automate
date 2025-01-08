@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+	<configuration>
+		<pdfEncoding>UTF-8</pdfEncoding>
+		<title>Extent Report PDF</title>
+		<titleColor>964B00</titleColor>
+		<startTimesColor>33A532</startTimesColor>
+		<finishTimesColor>FF69B4</finishTimesColor>
+		<durationColor>00FFFF</durationColor>
+		<passCountColor>C0C0C0</passCountColor>
+		<failCountColor>A9A9A9</failCountColor>
+		<passColor>0b8c47</passColor>
+		<failColor>720000</failColor>
+		<skipColor>b17750</skipColor>
+		<warnColor>ffc100</warnColor>
+		<infoColor>114444</infoColor>
+		<categoryTitleColor>990000</categoryTitleColor>
+		<categoryNameColor>bd8275</categoryNameColor>
+		<authorTitleColor>002288</authorTitleColor>
+		<authorNameColor>3ac5b6</authorNameColor>
+		<deviceTitleColor>228800</deviceTitleColor>
+		<deviceNameColor>cd17bf</deviceNameColor>
+		<systemAttributeColor>000000</systemAttributeColor>
+		<systemTitleColor>bb1144</systemTitleColor>
+		<systemNameColor>990000</systemNameColor>
+		<systemValueColor>daa520</systemValueColor>
+		<exceptionTitleColor>000000</exceptionTitleColor>
+		<attributeTestStatusColor>660066</attributeTestStatusColor>
+		<testNameColor>d62d20</testNameColor>
+		<testTimesColor>ffa700</testTimesColor>
+		<testTimeStampColor>08080</testTimeStampColor>
+		<testExceptionColor>990000</testExceptionColor>
+
+	</configuration>
+</extentreports>

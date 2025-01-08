@@ -1,0 +1,10 @@
+/target/
+
+/.settings/
+
+/.classpath
+
+/.project
+
+# Ignore the entire webdriver directory
+/config/webdriver/

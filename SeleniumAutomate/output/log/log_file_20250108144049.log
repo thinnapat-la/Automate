@@ -1,0 +1,18 @@
+2025-01-08
+				14:40:49.099INFO [][selenium.utility.LogUtility:23] Found config file: config/scc-logback.xml
+2025-01-08
+				14:40:49.101INFO [][selenium.utility.LogUtility:24] ================== Log initial successful. ==================
+2025-01-08
+				14:40:49.103INFO [][selenium.utility.DriverUtility:44] Initializing WebDriver - Mode:local, Browser:chrome, Headless:FALSE, Incognito:FALSE
+2025-01-08
+				14:40:50.492INFO [][selenium.utility.DriverUtility:62] ================== WebDriver initial successful. ==================
+2025-01-08
+				14:40:50.677INFO [][selenium.utility.ReportUtility:65] ================== Report initial successful. ==================
+2025-01-08
+				14:40:50.682INFO [][selenium.test.RunTestNG:32] ================== Setup completed. ==================
+2025-01-08
+				14:40:50.695INFO [][selenium.test.RunTestNG:42] ================== Executing test case ==================
+2025-01-08
+				14:40:53.168INFO [][selenium.test.RunTestNG:46] ================== Test executed successfully. ==================
+2025-01-08
+				14:40:54.302INFO [][selenium.utility.ReportUtility:148] ================== Reports flushed successfully. ==================

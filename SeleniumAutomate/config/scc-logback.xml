@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level [%X{sessionId}][%logger{0}:%L]%m%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<timestamp key="timestamp" datePattern="yyyyMMddHHmmss" />
+	<!-- Define properties -->
+	<property name="LOG_FILE" value="${LOG_FILE:-log_file}" /> <!-- Default value is "tofs_log" -->
+	<property name="LOG_DIR" value="output/log" />
+
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_DIR}/${LOG_FILE}_${timestamp}.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${LOG_DIR}/${LOG_FILE}-%d{yyyy-MM-dd}.%i.log.zip
+			</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>10</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>1GB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd
+				HH:mm:ss.SSS}%-5level[%X{sessionId}][%logger{60}:%L] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="io.github" level="OFF" />
+	<logger name="org.asynchttpclient" level="OFF" />
+	<logger name="io.netty" level="OFF" />
+	<logger name="org.apache.fontbox" level="OFF" />
+	<logger name="org.apache.pdfbox" level="OFF" />
+	<logger name="org.apache.hc" level="OFF" />
+	<logger name="o.a.h.c.http" level="OFF" />
+	<logger name="org.mariadb.jdbc" level="OFF" />
+	<logger name="org.apache.fontbox" level="OFF" />
+	<logger name="org.apache.pdfbox.pdmodel" level="OFF" />
+
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>
