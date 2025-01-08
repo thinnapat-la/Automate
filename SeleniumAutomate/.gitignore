@@ -7,4 +7,6 @@
 /.project
 
 # Ignore the entire webdriver directory
-/config/webdriver/
+/config/webdriver/chrome/chromebrowser/
+/config/webdriver/edge/edgebrowser/
+/config/webdriver/firefox/firefoxbrowser/
