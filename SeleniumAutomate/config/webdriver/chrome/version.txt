@@ -1,0 +1,2 @@
+/chromebrowser/119.0.6045.105
+/chromebrowser/headless-125.0.6422.60
