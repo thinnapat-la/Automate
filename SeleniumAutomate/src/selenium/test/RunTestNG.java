@@ -41,7 +41,7 @@ public class RunTestNG {
         try {
             log.info("================== Executing test case ==================");
             driver.get("https://www.google.com");
-            reportUtility.reportLogPassPic("Open URL Pass");
+            reportUtility.reportLogPassPic("Open URL Successful");
 
             log.info("================== Test executed successfully. ==================");
         } catch (Exception e) {
