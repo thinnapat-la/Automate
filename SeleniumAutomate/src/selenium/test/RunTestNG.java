@@ -6,9 +6,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import lombok.extern.slf4j.Slf4j;
+import selenium.utility.ActionUtility;
 import selenium.utility.DriverUtility;
 import selenium.utility.LogUtility;
 import selenium.utility.ReportUtility;
+import selenium.utility.WaitUtility;
 
 @Slf4j
 public class RunTestNG {
@@ -39,8 +41,14 @@ public class RunTestNG {
     @Test
     public void runTest() {
         try {
+            // Initialize WaitUtility and ActionUtility
+        	WaitUtility waitUtility = new WaitUtility(driver);
+        	ActionUtility actionUtility = new ActionUtility(driver, waitUtility, reportUtility);
+        	
             log.info("================== Executing test case ==================");
-            driver.get("https://www.google.com");
+            
+//            driver.get("https://www.google.com");
+            actionUtility.actionOpenURL("https://www.google.com");
             reportUtility.reportLogPassPic("Open URL Successful");
 
             log.info("================== Test executed successfully. ==================");
