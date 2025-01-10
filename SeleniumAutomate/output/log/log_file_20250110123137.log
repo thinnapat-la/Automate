@@ -1,0 +1,24 @@
+2025-01-10
+				12:31:37.459INFO [][selenium.utility.LogUtility:23] Found config file: config/scc-logback.xml
+2025-01-10
+				12:31:37.461INFO [][selenium.utility.LogUtility:24] ================== Log initial successful. ==================
+2025-01-10
+				12:31:37.463INFO [][selenium.utility.DriverUtility:44] Initializing WebDriver - Mode:local, Browser:chrome, Headless:TRUE, Incognito:FALSE
+2025-01-10
+				12:31:37.468INFO [][selenium.utility.DriverUtility:163] headless
+2025-01-10
+				12:31:38.822INFO [][selenium.utility.DriverUtility:62] ================== WebDriver initial successful. ==================
+2025-01-10
+				12:31:38.997INFO [][selenium.utility.ReportUtility:65] ================== Report initial successful. ==================
+2025-01-10
+				12:31:39.000INFO [][selenium.test.RunTestCase:40] ================== Setup completed. ==================
+2025-01-10
+				12:31:39.016INFO [][selenium.test.RunTestCase:54] ================== Executing test case ==================
+2025-01-10
+				12:31:43.753INFO [][selenium.action.ActionCase:21] selectMainMenu
+2025-01-10
+				12:31:48.118INFO [][selenium.action.ActionCase:31] searchBankBranch
+2025-01-10
+				12:31:48.119INFO [][selenium.test.RunTestCase:59] ================== Test executed successfully. ==================
+2025-01-10
+				12:31:50.262INFO [][selenium.utility.ReportUtility:148] ================== Reports flushed successfully. ==================
