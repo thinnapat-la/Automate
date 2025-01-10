@@ -3,7 +3,7 @@
 <suite name="SeleniumExcelProject">
 	<test thread-count="1" name="RunTestNG" group-by-instances="true">
 		<classes>
-			<class name="selenium.test.RunTestNG" />
+			<class name="selenium.test.RunTestCase" />
 		</classes>
 	</test>
 </suite>

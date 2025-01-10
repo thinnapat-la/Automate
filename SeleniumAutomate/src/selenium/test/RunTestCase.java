@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import lombok.extern.slf4j.Slf4j;
+import selenium.action.ActionCase;
 import selenium.utility.ActionUtility;
 import selenium.utility.DriverUtility;
 import selenium.utility.LogUtility;
@@ -13,11 +14,16 @@ import selenium.utility.ReportUtility;
 import selenium.utility.WaitUtility;
 
 @Slf4j
-public class RunTestNG {
+public class RunTestCase {
 
     private WebDriver driver;
     private ReportUtility reportUtility;
 
+	private static String ID = "id";
+	private static String NAME = "name";
+	private static String CSS = "css";
+	private static String XPATH = "xpath";
+	
     @BeforeClass(alwaysRun = true)
     public void setUp() {
         try {
@@ -30,7 +36,7 @@ public class RunTestNG {
             // Initialize Report
             reportUtility = new ReportUtility(driver); // Pass WebDriver to ReportUtility
             reportUtility.setupReport();
-            reportUtility.createScenario("Test");
+            reportUtility.createScenario("Search Branch Tisco");
             log.info("================== Setup completed. ==================");
         } catch (Exception e) {
             log.error("Error during setup: ", e);
@@ -39,22 +45,19 @@ public class RunTestNG {
     }
 
     @Test
-    public void runTest() {
-        try {
+    public void performTest() throws Exception {
             // Initialize WaitUtility and ActionUtility
         	WaitUtility waitUtility = new WaitUtility(driver);
         	ActionUtility actionUtility = new ActionUtility(driver, waitUtility, reportUtility);
+        	ActionCase actionCase = new ActionCase();
         	
             log.info("================== Executing test case ==================");
             
-//            driver.get("https://www.google.com");
-            actionUtility.actionOpenURL("https://www.google.com");
-            reportUtility.reportLogPassPic("Open URL Successful");
-
+            actionCase.selectMainMenu(actionUtility, reportUtility, "ul[id='menu-1-2760b80'] li[class='menu-item menu-item-type-custom menu-item-object-custom menu-item-32']");
+            actionCase.searchBankBranch(actionUtility, reportUtility, "กรุงเทพมหานคร", "สาขาเซ็นทรัลปิ่นเกล้า");
+            
             log.info("================== Test executed successfully. ==================");
-        } catch (Exception e) {
-            log.error("Error during test execution: ", e);
-        }
+
     }
 
     @AfterClass(alwaysRun = true)
