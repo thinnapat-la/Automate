@@ -6,6 +6,8 @@
 
 /.project
 
+/test-output/
+
 # Ignore the entire webdriver directory
 /config/webdriver/chrome/chromebrowser/
 /config/webdriver/edge/edgebrowser/

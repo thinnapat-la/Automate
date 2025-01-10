@@ -32,7 +32,7 @@ public class RunTestCase {
         	logUtility.initialLog();
             // Initialize WebDriverUtility
         	DriverUtility driverUtility = new DriverUtility();
-            driver = driverUtility.initializeDriver("local", "chrome", "FALSE", "FALSE");
+            driver = driverUtility.initializeDriver("local", "chrome", "TRUE", "FALSE");
             // Initialize Report
             reportUtility = new ReportUtility(driver); // Pass WebDriver to ReportUtility
             reportUtility.setupReport();
